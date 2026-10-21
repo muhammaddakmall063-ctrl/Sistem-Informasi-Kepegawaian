@@ -1,0 +1,1091 @@
+
+/* =========================================================
+   MODERN DASHBOARD UI
+   Style: Modern • Aesthetic • Clean • Premium
+========================================================= */
+
+
+/* ==============================
+   RESET
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Inter, Arial, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(45,108,223,0.06), transparent 28%),
+        radial-gradient(circle at 90% 90%, rgba(124,58,237,0.05), transparent 28%),
+        #f5f7fb;
+
+    color: #263445;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   LAYOUT
+================================= */
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   SIDEBAR
+================================= */
+
+.sidebar {
+    width: 240px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111827 0%,
+            #172033 55%,
+            #1b263b 100%
+        );
+
+    color: #fff;
+
+    padding: 25px 14px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+
+    box-shadow:
+        8px 0 35px rgba(15, 23, 42, 0.12);
+
+    z-index: 1000;
+
+    overflow-y: auto;
+}
+
+
+/* Garis dekorasi */
+
+.sidebar::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4f8cff,
+            #7c3aed,
+            transparent
+        );
+}
+
+
+/* ==============================
+   BRAND
+================================= */
+
+.sidebar .brand {
+    text-align: center;
+
+    margin-bottom: 38px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 15px rgba(79, 140, 255, 0.25);
+}
+
+
+/* ==============================
+   NAVIGATION
+================================= */
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.sidebar nav a {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    color: #aeb9ca;
+
+    text-decoration: none;
+
+    padding: 13px 16px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+.sidebar nav a:hover {
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    transform: translateX(4px);
+
+    box-shadow:
+        inset 3px 0 0 rgba(255,255,255,0.15);
+}
+
+
+/* Menu aktif */
+
+.sidebar nav a.active {
+    background:
+        linear-gradient(
+            135deg,
+            #3478ed,
+            #5b5ce2
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(45, 108, 223, 0.28);
+}
+
+
+/* Glow menu aktif */
+
+.sidebar nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    right: 10px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 10px #ffffff;
+}
+
+
+/* ==============================
+   CONTENT
+================================= */
+
+.content {
+    flex: 1;
+
+    margin-left: 240px;
+
+    min-width: 0;
+}
+
+
+/* ==============================
+   TOPBAR
+================================= */
+
+.topbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    padding: 20px 34px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border-bottom:
+        1px solid rgba(226, 232, 240, 0.8);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+
+.topbar h1 {
+    font-size: 22px;
+
+    color: #172033;
+
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* ==============================
+   PAGE BODY
+================================= */
+
+.page-body {
+    padding: 32px 34px;
+}
+
+
+/* ==============================
+   CARD
+================================= */
+
+.card {
+    position: relative;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    border:
+        1px solid rgba(226, 232, 240, 0.9);
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.045);
+
+    margin-bottom: 22px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+    overflow: hidden;
+}
+
+
+/* Decorative glow */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -50px;
+    right: -50px;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(45, 108, 223, 0.06);
+
+    pointer-events: none;
+}
+
+
+/* Hover */
+
+.card:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(45, 108, 223, 0.16);
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.09);
+}
+
+
+/* ==============================
+   DASHBOARD CARDS
+================================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+
+.dashboard-cards .card {
+    min-width: 0;
+
+    text-align: left;
+
+    padding: 24px;
+
+    margin-bottom: 0;
+}
+
+
+/* Angka */
+
+.dashboard-cards .card h3 {
+    position: relative;
+
+    font-size: 30px;
+
+    color: #2d6cdf;
+
+    font-weight: 750;
+
+    margin-bottom: 5px;
+
+    letter-spacing: -0.8px;
+}
+
+
+/* Label */
+
+.dashboard-cards .card p {
+    color: #7b8798;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* ==============================
+   TOTAL GAJI
+================================= */
+
+.total-gaji-card {
+    text-align: center;
+}
+
+
+.total-gaji-card h3 {
+    font-size: 34px;
+
+    color: #2d6cdf;
+
+    margin-top: 14px;
+
+    font-weight: 750;
+
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 4px 15px rgba(45, 108, 223, 0.12);
+}
+
+
+.total-gaji-card p {
+    color: #7b8798;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   DROPDOWN BULAN
+================================= */
+
+.form-bulan {
+    margin-bottom: 12px;
+}
+
+
+.form-bulan select {
+    padding: 10px 38px 10px 13px;
+
+    border:
+        1px solid #dce2eb;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    color: #344054;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.form-bulan select:hover {
+    border-color: #2d6cdf;
+
+    transform: translateY(-1px);
+}
+
+
+.form-bulan select:focus {
+    border-color: #2d6cdf;
+
+    box-shadow:
+        0 0 0 4px rgba(45, 108, 223, 0.10);
+}
+
+
+/* ==============================
+   TABLE
+================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e7ebf1;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.035);
+}
+
+
+/* Header */
+
+th {
+    background:
+        linear-gradient(
+            180deg,
+            #f9fafc,
+            #f4f6fa
+        );
+
+    color: #475467;
+    font-weight: 650;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    padding: 14px 15px;
+    text-align: left;
+    border-bottom:
+        1px solid #e5e9f0;
+    white-space: nowrap;
+    
+}
+
+
+/* Isi */
+
+td {
+    padding: 14px 15px;
+
+    text-align: left;
+
+    border-bottom:
+        1px solid #edf0f4;
+
+    font-size: 14px;
+
+    color: #344054;
+
+    background: #ffffff;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+/* Baris terakhir */
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Hover baris */
+
+tbody tr {
+    transition:
+        transform 0.15s ease;
+}
+
+
+tbody tr:hover td {
+    background:
+        #f7faff;
+}
+
+
+/* ==============================
+   BUTTON
+================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 9px 15px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn:active {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   PRIMARY
+================================= */
+
+.btn-primary {
+    background:
+        linear-gradient(
+            135deg,
+            #3478ed,
+            #2d6cdf
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 13px rgba(45, 108, 223, 0.20);
+}
+
+
+.btn-primary:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #2d6cdf,
+            #245bc0
+        );
+
+    box-shadow:
+        0 8px 18px rgba(45, 108, 223, 0.28);
+}
+
+
+/* ==============================
+   WARNING
+================================= */
+
+.btn-warning {
+    background:
+        linear-gradient(
+            135deg,
+            #f7b955,
+            #f2a93b
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 12px rgba(242, 169, 59, 0.16);
+}
+
+
+.btn-warning:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #f2a93b,
+            #df962b
+        );
+}
+
+
+/* ==============================
+   DANGER
+================================= */
+
+.btn-danger {
+    background:
+        linear-gradient(
+            135deg,
+            #ef6259,
+            #e5534b
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 12px rgba(229, 83, 75, 0.16);
+}
+
+
+.btn-danger:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #e5534b,
+            #cf413a
+        );
+}
+
+
+/* ==============================
+   SECONDARY
+================================= */
+
+.btn-secondary {
+    background:
+        #eef1f5;
+
+    color: #475467;
+
+    box-shadow:
+        none;
+}
+
+
+.btn-secondary:hover {
+    background:
+        #e1e6ed;
+
+    color: #263445;
+}
+
+
+/* ==============================
+   TOOLBAR
+================================= */
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: sticky;
+    top: 77px;
+    z-index: 90;
+    padding: 14px 0;
+    background: #f5f7fb;
+}
+
+
+/* ==============================
+   SEARCH
+================================= */
+
+.search-form {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.search-form input[type="text"] {
+    padding: 10px 13px;
+
+    border:
+        1px solid #d8dee8;
+
+    border-radius: 9px;
+
+    width: 250px;
+
+    font-size: 14px;
+
+    background: #ffffff;
+
+    color: #344054;
+
+    outline: none;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease,
+        width 0.25s ease;
+}
+
+
+.search-form input[type="text"]:focus {
+    border-color: #2d6cdf;
+
+    box-shadow:
+        0 0 0 4px rgba(45, 108, 223, 0.10);
+
+    width: 280px;
+}
+
+
+.search-form input[type="text"]::placeholder {
+    color: #98a2b3;
+}
+
+
+.search-form button {
+    padding: 10px 16px;
+}
+
+
+/* ==============================
+   FORM
+================================= */
+
+form.form-box {
+    max-width: 500px;
+}
+
+
+form.form-box label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    color: #344054;
+
+    font-weight: 650;
+}
+
+
+form.form-box input,
+form.form-box select {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    margin-bottom: 17px;
+
+    border:
+        1px solid #d8dee8;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    color: #344054;
+
+    background: #ffffff;
+
+    outline: none;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+form.form-box input:hover,
+form.form-box select:hover {
+    border-color: #bfc9d8;
+}
+
+
+form.form-box input:focus,
+form.form-box select:focus {
+    border-color: #2d6cdf;
+
+    box-shadow:
+        0 0 0 4px rgba(45, 108, 223, 0.10);
+}
+
+
+/* ==============================
+   ACTIONS
+================================= */
+
+.actions {
+    display: flex;
+
+    gap: 7px;
+
+    align-items: center;
+
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   ALERT
+================================= */
+
+.alert {
+    position: relative;
+
+    padding: 13px 17px;
+
+    border-radius: 10px;
+
+    margin-bottom: 17px;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 5px 15px rgba(15, 23, 42, 0.04);
+}
+
+
+.alert-success {
+    background:
+        linear-gradient(
+            135deg,
+            #ecfdf3,
+            #f4fff8
+        );
+
+    color: #027a48;
+
+    border:
+        1px solid #abefc6;
+}
+
+
+.alert-error {
+    background:
+        linear-gradient(
+            135deg,
+            #fef3f2,
+            #fff8f7
+        );
+
+    color: #b42318;
+
+    border:
+        1px solid #fecdca;
+}
+
+
+/* ==============================
+   SCROLLBAR
+================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #eef1f5;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #c4ccd8;
+
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9da8b7;
+}
+
+
+/* ==============================
+   SELECTION
+================================= */
+
+::selection {
+    background: rgba(45, 108, 223, 0.18);
+
+    color: #172033;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 205px;
+    }
+
+    .content {
+        margin-left: 205px;
+    }
+
+    .page-body {
+        padding: 24px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 18px 12px;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .sidebar .brand {
+        margin-bottom: 20px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+    .sidebar nav a {
+        flex: 1;
+
+        min-width: 140px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .topbar {
+        padding: 16px 20px;
+    }
+
+    .page-body {
+        padding: 20px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-cards .card {
+        text-align: center;
+    }
+
+    .toolbar {
+        align-items: stretch;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .search-form input[type="text"] {
+        flex: 1;
+
+        width: auto;
+    }
+
+    .search-form input[type="text"]:focus {
+        width: auto;
+    }
+
+    table {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+    }
+}
